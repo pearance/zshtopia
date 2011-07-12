@@ -2,11 +2,11 @@
 
 # Backup any remnants of an existing bash environment.
 #------------------------------------------------------------------------------
+cd ~
 if [ -d "~/.bashtopia.backup" ]; then
   rm -rf ~/.bashtopia.backup
 fi
 mkdir -p ~/.bashtopia.backup
-cd ~
 for i in .profile .bashrc .bash_aliases .bash
   do [ -e $i ] && mv -f $i .bashtopia.backup/$i.bashtopia.bak
 done
@@ -33,6 +33,11 @@ ln -s .bash/profile .profile
 ln -s .bash/bashrc .bashrc
 ln -s .bash/bash_aliases .bash_aliases
 echo -e "\nLinked to configuration files successfully!\n"
+
+
+
+# Create trash folder for del alias.
+mkdir -p ~/share/trash/
 
 
 
