@@ -2,7 +2,7 @@
 
 # Backup any remnants of an existing bash environment.
 #------------------------------------------------------------------------------
-if [ -d "~/.bashtopia.backup" ] then
+if [ -d "~/.bashtopia.backup" ]; then
   rm -rf ~/.bashtopia.backup
 fi
 mkdir -p ~/.bashtopia.backup
