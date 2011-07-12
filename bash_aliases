@@ -5,12 +5,13 @@
 # ALIASES
 #########
 
-# COMMANDS (IMPROVED WITH FLAGS)
+# GENERAL COMMANDS
 #-------------------------------------------------------------------------------
 alias rm='rm -if'
 alias cp='cp -i'
 alias mv='mv -i'
 alias ra='rm -r * .*'
+alias del='mv -t ~/share/trash/ --backup=t'
 alias df='df -h'
 alias du='du -sh'
 alias less='less -r'                          # raw control characters
@@ -58,16 +59,23 @@ alias g='git status'
 alias gl='git lg | head'
 alias gll='git lg '
 alias ga='git add'
-alias gc='git commit'
+alias gc='git commit -v'
 alias gcm='git commit -m'
-alias gca='git commit -a'
+alias gca='git commit -av'
 alias gcam='git commit -am'
 alias gp='git push'
 alias gpom='git push origin master'
 alias gpu='git pull'
+alias gf='git fetch'
+alias gm='git merge'
 alias gd='git diff'
 alias gdt='git difftool'
+alias gmv='git mv'
+alias grm='git rm'
 alias gamend='git commit --amend'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gco='git checkout'
 
 
 
