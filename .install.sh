@@ -5,7 +5,7 @@
 mkdir -p ~/.bashtopia.backup
 cd ~
 for i in .profile .bashrc .bash_aliases .bash
-  do [ -e $i ] && mv -f $i bashtopia.backup/$i.bashtopia.bak
+  do [ -e $i ] && mv -f $i .bashtopia.backup/$i.bashtopia.bak
 done
 # Just in case they are symlinks, remove them.
 rm -f ~/.profile
