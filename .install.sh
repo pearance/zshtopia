@@ -2,6 +2,9 @@
 
 # Backup any remnants of an existing bash environment.
 #------------------------------------------------------------------------------
+if [ -d "~/.bashtopia.backup" ] then
+  rm -rf ~/.bashtopia.backup
+fi
 mkdir -p ~/.bashtopia.backup
 cd ~
 for i in .profile .bashrc .bash_aliases .bash
@@ -25,9 +28,10 @@ echo -e "\nCloned Bashtopia successfully!\n"
 
 # Link to configuration files.
 #------------------------------------------------------------------------------
-ln -s ~/.bash/profile ~/.profile
-ln -s ~/.bash/bashrc ~/.bashrc
-ln -s ~/.bash/bash_aliases ~/.bash_aliases
+cd ~
+ln -s .bash/profile .profile
+ln -s .bash/bashrc .bashrc
+ln -s .bash/bash_aliases .bash_aliases
 echo -e "\nLinked to configuration files successfully!\n"
 
 
