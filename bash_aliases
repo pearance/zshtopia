@@ -55,7 +55,8 @@ alias re='. ~/.profile' # Reload Environment
 
 # GIT
 #-------------------------------------------------------------------------------
-alias g='git status'
+alias g='git'
+alias gs='git status'
 alias gl='git lg | head'
 alias gll='git lg '
 alias ga='git add'
