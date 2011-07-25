@@ -11,7 +11,7 @@ alias rm='rm -if'
 alias cp='cp -i'
 alias mv='mv -i'
 alias ra='rm -r * .*'
-alias del='mv -t ~/share/trash/ --backup=t'
+alias del='mv -t ~/trash/ --backup=t'
 alias df='df -h'
 alias du='du -sh'
 alias less='less -r'                          # raw control characters
