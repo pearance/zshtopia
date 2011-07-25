@@ -1,6 +1,6 @@
-###########
-# BASHISM #
-###########
+#############
+# BASHTOPIA #
+#############
 
 # ALIASES
 #########
@@ -11,12 +11,12 @@ alias rm='rm -if'
 alias cp='cp -i'
 alias mv='mv -i'
 alias ra='rm -r * .*'
-alias del='mv -t ~/trash/ --backup=t'
 alias df='df -h'
 alias du='du -sh'
 alias less='less -r'                          # raw control characters
 alias whence='type -a'                        # where, of a sort
 alias grep='grep --color'                     # show differences in color
+alias trash='mv -t ~/trash/ --backup=t'
 
 
 
@@ -78,6 +78,7 @@ alias gamend='git commit --amend'
 alias gb='git branch'
 alias gba='git branch -a'
 alias gco='git checkout'
+alias ginit='git init; git add .; git commit -m "Initial commit"'
 alias gkill='rm -r .git'
 
 
@@ -90,14 +91,5 @@ function p {
   ll
 }
 
-function a2 {
-  sudo service apache2 $1
-}
-
-function ginit {
- git init
- git add .
- git commit -m 'Initial commit'
-}
 
 # vim: set ft=sh:

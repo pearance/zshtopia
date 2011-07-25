@@ -36,6 +36,11 @@ echo -e "\nLinked to configuration files successfully!\n"
 
 
 
+# Generate git config file.
+
+
+
+
 # Clean up.
 #------------------------------------------------------------------------------
 rm ~/.install.sh
