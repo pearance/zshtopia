@@ -41,6 +41,7 @@ alias sa='cd /etc/apache2/sites-available && ll'
 alias ma='cd /etc/apache2/mods-available && ll'
 alias se='cd /etc/apache2/sites-enabled && ll'
 alias me='cd /etc/apache2/mods-enabled && ll'
+alias a2='sudo /etc/init.d/apache2'
 
 
 
@@ -77,6 +78,7 @@ alias gamend='git commit --amend'
 alias gb='git branch'
 alias gba='git branch -a'
 alias gco='git checkout'
+alias gkill='rm -r .git'
 
 
 
@@ -98,4 +100,4 @@ function ginit {
  git commit -m 'Initial commit'
 }
 
-# vim: set ft=sh:               
+# vim: set ft=sh:

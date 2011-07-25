@@ -3,12 +3,9 @@
 # Backup any remnants of an existing bash environment.
 #------------------------------------------------------------------------------
 cd ~
-if [ -d "~/.bashtopia.backup" ]; then
-  rm -rf ~/.bashtopia.backup
-fi
-mkdir -p ~/.bashtopia.backup
+mkdir -p ~/backup/bashtopia/
 for i in .profile .bashrc .bash_aliases .bash
-  do [ -e $i ] && mv -f $i .bashtopia.backup/$i.bashtopia.bak
+  do [ -e $i ] && mv -fb $i backup/bashtopio/$i.bashtopia.bak
 done
 # Just in case they are symlinks, remove them.
 rm -f ~/.profile
