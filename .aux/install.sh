@@ -53,7 +53,7 @@ echo -e "\nLinked to configuration files successfully!\n"
 
 # Generate git config file.
 generate_gitconfig >> ~/.gitconfig
-function  generate_gitconfig {
+function  generate_gitconfig () {
 cat << _EOF_
 [alias]
   lg = log --graph --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
