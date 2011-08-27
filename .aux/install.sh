@@ -101,7 +101,7 @@ echo -e "\nGit configured successfully!\n"
 
 
 # Clean up.
-rm ~/.install.sh
+rm ~/install.sh
 echo -e "\nCleaned up successfully!\n"
 #------------------------------------------------------------------------------
 
