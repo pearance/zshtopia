@@ -52,8 +52,7 @@ echo -e "\nLinked to configuration files successfully!\n"
 
 
 # Generate git config file.
-generate_gitconfig >> ~/.gitconfig
-function  generate_gitconfig () {
+function generate_gitconfig {
 cat << _EOF_
 [alias]
   lg = log --graph --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
@@ -93,6 +92,7 @@ cat << _EOF_
   untracked = red
 _EOF_
 }
+generate_gitconfig >> ~/.gitconfig
 git config --global user.name "$USER_FULLNAME"
 git config --global user.email "$USER_EMAIL"
 echo -e "\nGit configured successfully!\n"
