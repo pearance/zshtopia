@@ -57,7 +57,7 @@ alias a2='sudo /etc/init.d/apache2'
 # GIT
 #-------------------------------------------------------------------------------
 alias g='git'
-alias gs='git status'
+alias gs='clear; git status'
 alias gl='git lg | head'
 alias gll='git lg '
 alias glog='git log '
@@ -86,9 +86,18 @@ alias gkill='rm -r .git'
 alias gresolve='git !f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`'
 alias gaddresolve='git !f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`'
 
+
+
 # DRUSH
 #######
-alias dr='drush --package-handler=git_drupalorg'
+alias d='drush -y --uri=all'
+alias dr='drush -y -l www.labwhip.com --uri=all'
+alias drgit='drush --package-handler=git_drupalorg'
+alias drush='drush -y -l www.labwhip.com --uri=all'
+alias 'dldm'='drush pm-list --pipe --type=module --status=disabled'
+alias 'dlem'='drush pm-list --pipe --type=module --status=enabled'
+
+
 
 
 
@@ -109,6 +118,14 @@ function p {
   clear
   cd /srv/$1/
   ll
+}
+
+function chmoddirs {
+  chmod $1 $(find . ! -type f)
+}
+
+function chmodfiles {
+  chmod $1 $(find . ! -type d)
 }
 
 function cs () {
