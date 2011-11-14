@@ -127,6 +127,6 @@ alias A='tmux attach'
 alias colors='termcolors | less'
 
 
-
+source ~/.local.bash_aliases
 
 # vim: set ft=sh:
