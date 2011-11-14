@@ -1,10 +1,10 @@
-######################
-# BASHTOPIA ALIASES  #
-######################
+##################################
+# SHELLTOPIA ALIASES & FUNCTIONS #
+##################################
 
 
 
-# BASH ENVIRONMENT
+# ENVIRONMENT
 #-------------------------------------------------------------------------------
 alias eprofile='vim ~/.profile'
 alias ebash='vim ~/.bashrc'
@@ -15,18 +15,15 @@ alias re='. ~/.profile' # Reload Environment
 
 # GENERAL COMMANDS
 #-------------------------------------------------------------------------------
-alias rm='rm -if'
-alias cp='cp -i'
-alias mv='mv -i'
-alias ra='rm -r * .*'                         # Remove all
-alias df='df -h'
-alias du='du -sh'
-alias less='less -r'                          # Raw control characters
-alias whence='type -a'                        # Where, of a sort
-alias grep='grep --color=auto'                # Show differences in color
-alias fgrep='fgrep --color=auto'
-alias egrep='egrep --color=auto'
-alias trash='mv -t ~/trash/ --backup=t'
+alias less='less -r'
+alias whence='type -a'
+alias grep='grep --color=auto'
+function fup {
+  tar -xf $1;
+  rm $1;
+  drush en $1 -y;
+}
+
 
 
 # NAVIGATION
@@ -37,6 +34,23 @@ alias la='clear && ls --color=auto -hFlXA --group-directories-first'
 alias ..='cd ..'
 alias tt='tree -C'
 alias td='tree -dC'
+function p { clear; cd /srv/$1/; ll; }
+
+
+
+# FILE MANAGEMENT
+#-------------------------------------------------------------------------------
+alias rm='rm -if'
+alias cp='cp -i'
+alias mv='mv -i'
+alias ra='rm -r * .*'
+alias df='df -h'
+alias du='du -sh'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias trash='mv -t ~/trash/ --backup=t'
+function chmoddirs { chmod $1 $(find . ! -type f); }
+function chmodfiles { chmod $1 $(find . ! -type d); }
 
 
 
@@ -90,10 +104,8 @@ alias gaddresolve='git !f() { git ls-files --unmerged | cut -f2 | sort -u ; }; g
 
 # DRUSH
 #######
-alias d='drush -y --uri=all'
-alias dr='drush -y -l www.labwhip.com --uri=all'
-alias drgit='drush --package-handler=git_drupalorg'
-alias drush='drush -y -l www.labwhip.com --uri=all'
+alias d='drush -y'
+alias dgit='d dl --package-handler=git_drupalorg'
 alias 'dldm'='drush pm-list --pipe --type=module --status=disabled'
 alias 'dlem'='drush pm-list --pipe --type=module --status=enabled'
 
@@ -112,47 +124,6 @@ alias A='tmux attach'
 alias colors='termcolors | less'
 
 
-# FUNCTIONS
-###########
-function p {
-  clear
-  cd /srv/$1/
-  ll
-}
 
-function chmoddirs {
-  chmod $1 $(find . ! -type f)
-}
-
-function chmodfiles {
-  chmod $1 $(find . ! -type d)
-}
-
-function cs () {
-  clear
-  # only change directory if a directory is specified
-  [ -n "${1}" ] && cd $1
-  # filesystem stats
-  echo "`df -hT .`"
-  echo ""
-  echo -n "[`pwd`:"
-  # count files
-  echo -n " <`find . -maxdepth 1 -mindepth 1 -type f | wc -l | tr -d '[:space:]'` files>"
-  # count sub-directories
-  echo -n " <`find . -maxdepth 1 -mindepth 1 -type d | wc -l | tr -d '[:space:]'` dirs/>"
-  # count links
-  echo -n " <`find . -maxdepth 1 -mindepth 1 -type l | wc -l | tr -d '[:space:]'` links@>"
-  # total disk space used by this directory and all subdirectories
-  echo " <~`du -sh . 2> /dev/null | cut -f1`>]"
-  ROWS=`stty size | cut -d' ' -f1`
-  FILES=`find . -maxdepth 1 -mindepth 1 |
-  wc -l | tr -d '[:space:]'`
-  # if the terminal has enough lines, do a long listing
-  if [ `expr "${ROWS}" - 6` -lt "${FILES}" ]; then
-    ls -ACF
-  else
-    ls -hlAF --full-time
-  fi
-}
 
 # vim: set ft=sh:
