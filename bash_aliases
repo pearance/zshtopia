@@ -20,9 +20,12 @@ alias whence='type -a'
 alias clipboard='xclip -selection clipboard'
 alias grep='grep --color=auto'
 function fup {
-  tar -xf $1;
-  rm $1;
-  drush en $1 -y;
+  mv $1/.git /tmp/
+  mv $1 /tmp/
+  tar -xf $1*.tar
+  mv $1*.tar /tmp/
+  mv /tmp/.git $1/
+  drush $2 en $1 -y
 }
 
 
@@ -126,6 +129,6 @@ alias A='tmux attach'
 alias colors='termcolors | less'
 
 
-
+source ~/.bash_aliases.local
 
 # vim: set ft=sh:
