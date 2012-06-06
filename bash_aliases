@@ -17,6 +17,7 @@ alias re='. ~/.profile' # Reload Environment
 #-------------------------------------------------------------------------------
 alias less='less -r'
 alias whence='type -a'
+alias clipboard='xclip -selection clipboard'
 alias grep='grep --color=auto'
 function fup {
   tar -xf $1;
@@ -31,6 +32,7 @@ function fup {
 alias ls='ls -hF --color=auto --group-directories-first'
 alias ll='clear && ls --color=auto -hFlX --group-directories-first'
 alias la='clear && ls --color=auto -hFlXA --group-directories-first'
+alias ld='ls -ld */'
 alias ..='cd ..'
 alias tt='tree -C'
 alias td='tree -dC'
