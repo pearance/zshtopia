@@ -189,3 +189,5 @@ PS1="\n$bldgrn[$txtpur\u$bldgrn@$bldpur\h$bldgrn]$bldpur \w > $bldred\$(parse_gi
 
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
