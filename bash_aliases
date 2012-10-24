@@ -6,9 +6,10 @@
 
 # ENVIRONMENT
 #-------------------------------------------------------------------------------
-alias eprofile='vim ~/.profile'
-alias ebash='vim ~/.bashrc'
-alias ealias='vim ~/.bash_aliases'
+alias eprofile='$EDITOR ~/.profile'
+alias ebash='$EDITOR ~/.bashrc'
+alias ealias='$EDITOR ~/.bash_aliases'
+alias ealiaslocal='$EDITOR ~/.bash_aliases.local'
 alias re='. ~/.profile' # Reload Environment
 
 
@@ -18,14 +19,6 @@ alias re='. ~/.profile' # Reload Environment
 alias less='less -r'
 alias whence='type -a'
 alias grep='grep --color=auto'
-function fup {
-  mv $1/.git /tmp/
-  mv $1 /tmp/
-  tar -xf $1*.tar
-  mv $1*.tar /tmp/
-  mv /tmp/.git $1/
-  drush $2 en $1 -y
-}
 
 
 
@@ -37,7 +30,6 @@ alias la='clear && ls --color=auto -hFlXA --group-directories-first'
 alias ..='cd ..'
 alias tt='tree -C'
 alias td='tree -dC'
-function p { clear; cd /srv/$1/; ll; }
 
 
 
@@ -84,7 +76,7 @@ alias gcm='git commit -m'
 alias gca='git commit -av'
 alias gcam='git commit -am'
 alias gp='git push'
-alias gpom='git push origin master'
+alias gpom='git push -u origin master'
 alias gpu='git pull'
 alias gf='git fetch'
 alias gm='git merge'
@@ -97,10 +89,11 @@ alias gb='git branch'
 alias gba='git branch -a'
 alias gt='git tag'
 alias gco='git checkout'
+alias gcl='git clone'
 alias ginit='git init; git add .; git commit -m "Initial commit"'
 alias gkill='rm -r .git'
 
-alias gresolve='git !f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`'
+alias gresolve='git !f() { git ls-files --unmerged | cut -f2 | sort -u ; }; $EDITOR `f`'
 alias gaddresolve='git !f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`'
 
 
@@ -111,8 +104,6 @@ alias d='drush -y'
 alias dgit='d dl --package-handler=git_drupalorg'
 alias 'dldm'='drush pm-list --pipe --type=module --status=disabled'
 alias 'dlem'='drush pm-list --pipe --type=module --status=enabled'
-
-
 
 
 
