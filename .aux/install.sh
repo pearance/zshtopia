@@ -56,7 +56,7 @@ echo -e "\nCloned Shelltopia successfully!\n"
 
 # Link to configuration files.
 ln -s ~/.shelltopia/zshrc ~/.zshrc
-ln -s ~/.shelltopia/tmux.conf ~/.tmux.conf
+ln -s ~/.shelltopia/tmux ~/.tmux.conf
 ln -s ~/.shelltopia/gitconfig ~/.gitconfig
 echo -e "\nLinked configuration files successfully!\n"
 #------------------------------------------------------------------------------
