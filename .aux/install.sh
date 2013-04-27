@@ -22,9 +22,9 @@ echo -e "\nInstalled zsh successfully!\n"
 
 
 # Create Folders
-mkdir -p ~/trash/
-mkdir -p ~/tmp/
+mkdir -p ~/bin/
 mkdir -p ~/backup/
+mkdir -p ~/trash/
 echo -e "\nCreated folder structure successfully!\n"
 #------------------------------------------------------------------------------
 
@@ -33,7 +33,7 @@ echo -e "\nCreated folder structure successfully!\n"
 # Backup any existing environment.
 mkdir -p ~/backup/shelltopia/
 
-for i in .zshrc .shelltopia .tmux.conf .zshrc.pre-oh-my-zsh
+for i in .zshrc .shelltopia .tmux.conf .zshrc.pre-oh-my-zsh .gitconfig
 	do [ -e $i  ] && mv -f --backup=t $i backup/shelltopia/$i.bak
 done
 echo -e "\nBackedup existing environment successfully!\n"
