@@ -33,15 +33,9 @@ echo -e "\nCreated folder structure successfully!\n"
 # Backup any existing environment.
 mkdir -p ~/backup/shelltopia/
 
-if [ -f ~/.tmux.conf  ] || [ -h ~/.tmux.conf  ]
-then
-	mv ~/.tmux.conf ~/backup/shelltopia/.tmux.conf
-fi
-
-if [ -f ~/.shelltopia ] || [ -h ~/.shelltopia  ]
-then
-	mv ~/.shelltopia ~/backup/shelltopia/.shelltopia
-fi
+for i in .zshrc .shelltopia .tmux.conf .zshrc.pre-oh-my-zsh
+	do [ -e $i  ] && mv -f --backup=t $i backup/shelltopia/$i.bak
+done
 echo -e "\nBackedup existing environment successfully!\n"
 #------------------------------------------------------------------------------
 
@@ -70,10 +64,9 @@ echo -e "\nGit configured successfully!\n"
 #------------------------------------------------------------------------------
 
 
-
 # Clean up.
-source ~/.zshrc
-rm ~/install.sh
-echo -e "\nCleaned up successfully!\n"
 #------------------------------------------------------------------------------
+rm ~/.install.sh
+echo -e "\nCleaned up successfully!\n"
+zsh
 
