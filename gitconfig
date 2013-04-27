@@ -1,0 +1,41 @@
+[alias]
+  lg = log --graph --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore
+
+[pager]
+  diff = false
+  status = false
+
+[diff]
+  tool = vimdiff
+
+[difftool]
+  prompt = false
+
+[color]
+  branch = auto
+  diff = auto
+  status = auto
+
+[color "branch"]
+  current = yellow reverse
+  local = magenta
+  remote = green
+
+[color "diff"]
+  meta = cyan bold
+  frag = magenta
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = green bold
+  changed = yellow bold
+  untracked = red bold
+
+[user]
+	name =
+	email =

@@ -1,6 +1,5 @@
-Bashtopia
-=========
+# SHELLTOPIA
+zsh, oh-my-zsh, tmux, and further configurations.
 
-Install
--------
-curl -O https://raw.github.com/Bashtopia/Bashtopia/master/.aux/install.sh; chmod 770 install.sh; ./install.sh
+## INSTALL
+curl -L https://raw.github.com/pearance/shelltopia/master/.aux/install.sh | sh
