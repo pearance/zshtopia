@@ -14,7 +14,7 @@ read $USER_EMAIL
 
 # Updates and installs.
 aptitude update
-aptitude install git-core zsh
+aptitude install git-core zsh tmux
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 echo -e "\nInstalled zsh successfully!\n"
 #------------------------------------------------------------------------------
@@ -66,7 +66,7 @@ echo -e "\nGit configured successfully!\n"
 
 # Clean up.
 #------------------------------------------------------------------------------
-rm ~/.install.sh
+rm ~/install.sh
 echo -e "\nCleaned up successfully!\n"
 zsh
 
