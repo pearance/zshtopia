@@ -42,7 +42,7 @@ echo -e "\nBackedup existing environment successfully!\n"
 
 
 # Clone Shelltopia.
-git clone git://github.com/pearance/shelltopia.git ~/.shelltopia
+git clone git://github.com/shelltopia/shelltopia.git ~/.shelltopia
 echo -e "\nCloned Shelltopia successfully!\n"
 #------------------------------------------------------------------------------
 
