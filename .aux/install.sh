@@ -31,10 +31,10 @@ echo -e "\nCreated folder structure successfully!\n"
 
 
 # Backup any existing environment.
-mkdir -p ~/backups/shelltopia/
+mkdir -p ~/backups/pre-zshtopia/
 
-for i in .zshrc .shelltopia .tmux.conf .zshrc.pre-oh-my-zsh .gitconfig
-	do [ -e $i  ] && mv -f --backup=t $i ~/backups/shelltopia/$i.bak
+for i in .zshrc .zsh .tmux.conf .zshrc.pre-oh-my-zsh .gitconfig
+	do [ -e $i  ] && mv -f --backup=t $i ~/backups/pre-zshtopia/$i.bak
 done
 
 for i in .zshrc .tmux.conf
@@ -45,17 +45,17 @@ echo -e "\nBackedup existing environment successfully!\n"
 
 
 
-# Clone Shelltopia.
-git clone git://github.com/shelltopia/shelltopia.git ~/.shelltopia
-echo -e "\nCloned Shelltopia successfully!\n"
+# Clone ZshEz.
+git clone git://github.com/zshtopia/zshtopia.git ~/.zshtopia
+echo -e "\nCloned zshtopia successfully!\n"
 #------------------------------------------------------------------------------
 
 
 
 # Link to configuration files.
-ln -s ~/.shelltopia/zshrc ~/.zshrc
-ln -s ~/.shelltopia/tmux ~/.tmux.conf
-cp ~/.shelltopia/gitconfig ~/.gitconfig
+ln -s ~/.zsh/zshrc ~/.zshrc
+ln -s ~/.zsh/tmux ~/.tmux.conf
+cp ~/.zsh/gitconfig ~/.gitconfig
 echo -e "\nLinked configuration files successfully!\n"
 #------------------------------------------------------------------------------
 
