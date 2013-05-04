@@ -35,7 +35,7 @@ set   -g  monitor-activity on
 set   -g  bell-action none
 set   -g  prefix M-a
 set   -g  buffer-limit 500
-set   -g default-shell /bin/zsh
+set   -g  default-shell /bin/zsh
 #-------------------------------------------------------------------------------
 
 

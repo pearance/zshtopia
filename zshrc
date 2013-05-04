@@ -50,6 +50,12 @@ alias trash='mv -t ~/trash/ --backup=t && echo TRASH BINED!'
 function dchmod { chmod $1 $(find . ! -type f); }
 function fchmod { chmod $1 $(find . ! -type d); }
 
+# TMUX.
+alias tmux='tmux -2 -u'
+alias A='tmux attach'
+
+# Tools.
+alias col='termcolors | less'
 
 
 # Load RVM.
