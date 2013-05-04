@@ -35,7 +35,3 @@
   added = green bold
   changed = yellow bold
   untracked = red bold
-
-[user]
-	name =
-	email =

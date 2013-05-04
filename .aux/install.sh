@@ -36,6 +36,10 @@ mkdir -p ~/backups/shelltopia/
 for i in .zshrc .shelltopia .tmux.conf .zshrc.pre-oh-my-zsh .gitconfig
 	do [ -e $i  ] && mv -f --backup=t $i ~/backups/shelltopia/$i.bak
 done
+
+for i in .zshrc .tmux.conf
+	do [ -e $i  ] && rm -f $i
+done
 echo -e "\nBackedup existing environment successfully!\n"
 #------------------------------------------------------------------------------
 
@@ -51,7 +55,7 @@ echo -e "\nCloned Shelltopia successfully!\n"
 # Link to configuration files.
 ln -s ~/.shelltopia/zshrc ~/.zshrc
 ln -s ~/.shelltopia/tmux ~/.tmux.conf
-ln -s ~/.shelltopia/gitconfig ~/.gitconfig
+cp ~/.shelltopia/gitconfig ~/.gitconfig
 echo -e "\nLinked configuration files successfully!\n"
 #------------------------------------------------------------------------------
 

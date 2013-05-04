@@ -30,6 +30,7 @@ export RAILS_DEFAULT_DATABASE=mysql
 
 # Aliases.
 alias ez="vim ~/.zshrc"
+alias gs="gst"
 
 
 # Load RVM.
