@@ -35,7 +35,7 @@ echo -e "\nBackedup existing environment successfully!\n"
 
 
 # Clone Zshtopia.
-git clone git://github.com/zshtopia/zshtopia.git ~/.zsh
+git clone git@github.com:zshtopia/zshtopia.git ~/.zsh
 echo -e "\nCloned zshtopia successfully!\n"
 #------------------------------------------------------------------------------
 
