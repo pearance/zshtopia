@@ -41,7 +41,7 @@ alias la='clear && ls --color=auto -hFlXA --group-directories-first'
 alias ftree='tree -C | less'
 alias dtree='tree -dC | less'
 
-#File Management Aliases.
+# File Management Aliases.
 alias rm='rm -if'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -49,6 +49,12 @@ alias empty='rm -I * .* && echo EMPTIED!'
 alias trash='mv -t ~/trash/ --backup=t && echo TRASHED!'
 function dchmod { chmod $1 $(find . ! -type f); }
 function fchmod { chmod $1 $(find . ! -type d); }
+
+# Git Overrides.
+alias gpl='git pull'
+alias gl='log --graph --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative | head'
+alias gll='log --graph --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative | head'
+alias glog='git log'
 
 # TMUX.
 alias tmux='tmux -2 -u'
