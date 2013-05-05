@@ -45,7 +45,7 @@ echo -e "\nBackedup existing environment successfully!\n"
 
 
 
-# Clone ZshEz.
+# Clone Zshtopia.
 git clone git://github.com/zshtopia/zshtopia.git ~/.zsh
 echo -e "\nCloned zshtopia successfully!\n"
 #------------------------------------------------------------------------------
@@ -54,7 +54,7 @@ echo -e "\nCloned zshtopia successfully!\n"
 
 # Link to configuration files.
 ln -s ~/.zsh/zshrc ~/.zshrc
-ln -s ~/.zsh/tmux ~/.tmux.conf
+ln -s ~/.zsh/tmux.conf ~/.tmux.conf
 cp ~/.zsh/gitconfig ~/.gitconfig
 echo -e "\nLinked configuration files successfully!\n"
 #------------------------------------------------------------------------------
