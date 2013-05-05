@@ -1,4 +1,5 @@
 #!/bin/bash
+clear
 
 # Updates and installs.
 aptitude update
@@ -51,20 +52,16 @@ echo -e "\nLinked configuration files successfully!\n"
 
 
 # User input.
-clear
 echo -e "\nFor your git configuration, please enter your..."
-echo -e "\nFull Name:"
-read $USER_FULLNAME
-
-echo -e "\nEmail Address:"
-read $USER_EMAIL
+read -p "\nFull Name:" fullname
+read -p "\nEmail Address:" email
 #------------------------------------------------------------------------------
 
 
 
 # Generate git config file.
-git config --global user.name "$USER_FULLNAME"
-git config --global user.email $USER_EMAIL
+git config --global user.name "$fullname"
+git config --global user.email $email
 echo -e "\nGit configured successfully!\n"
 #------------------------------------------------------------------------------
 
