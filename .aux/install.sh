@@ -52,16 +52,17 @@ echo -e "\nLinked configuration files successfully!\n"
 
 
 # User input.
-echo -e "\nFor your git configuration, please enter your..."
-read -p "\nFull Name:" fullname
-read -p "\nEmail Address:" email
+echo -e "For your git configuration, please enter your..."
+read -p "Full Name: " fullname
+echo
+read -p "Email Address: " email
 #------------------------------------------------------------------------------
 
 
 
 # Generate git config file.
-git config --global user.name $fullname
-git config --global user.email $email
+git config --global user.name "$fullname"
+git config --global user.email "$email"
 echo -e "\nGit configured successfully!\n"
 #------------------------------------------------------------------------------
 
