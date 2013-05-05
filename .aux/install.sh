@@ -1,17 +1,5 @@
 #!/bin/bash
 
-# User input.
-clear
-echo -e "\nFor your git configuration, please enter your..."
-echo -e "\nFull Name:"
-read $USER_FULLNAME
-
-echo -e "\nEmail Address:"
-read $USER_EMAIL
-#------------------------------------------------------------------------------
-
-
-
 # Updates and installs.
 aptitude update
 aptitude install git-core zsh tmux
@@ -53,17 +41,30 @@ echo -e "\nCloned zshtopia successfully!\n"
 
 
 # Link to configuration files.
-ln -s ~/.zsh/zshrc ~/.zshrc
-ln -s ~/.zsh/tmux.conf ~/.tmux.conf
+cd ~
+ln -s .zsh/zshrc ~/.zshrc
+ln -s .zsh/tmux.conf ~/.tmux.conf
 cp ~/.zsh/gitconfig ~/.gitconfig
 echo -e "\nLinked configuration files successfully!\n"
 #------------------------------------------------------------------------------
 
 
 
+# User input.
+clear
+echo -e "\nFor your git configuration, please enter your..."
+echo -e "\nFull Name:"
+read $USER_FULLNAME
+
+echo -e "\nEmail Address:"
+read $USER_EMAIL
+#------------------------------------------------------------------------------
+
+
+
 # Generate git config file.
 git config --global user.name "$USER_FULLNAME"
-git config --global user.email "$USER_EMAIL"
+git config --global user.email $USER_EMAIL
 echo -e "\nGit configured successfully!\n"
 #------------------------------------------------------------------------------
 
