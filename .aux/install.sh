@@ -60,7 +60,7 @@ read -p "\nEmail Address:" email
 
 
 # Generate git config file.
-git config --global user.name "$fullname"
+git config --global user.name $fullname
 git config --global user.email $email
 echo -e "\nGit configured successfully!\n"
 #------------------------------------------------------------------------------
