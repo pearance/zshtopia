@@ -52,8 +52,8 @@ function fchmod { chmod $1 $(find . ! -type d); }
 
 # Git Overrides.
 alias gpl='git pull'
-alias gl='log --graph --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative | head'
-alias gll='log --graph --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative | head'
+alias gl='git lg | head' 
+alias gll='git lg'
 alias glog='git log'
 
 # TMUX.
