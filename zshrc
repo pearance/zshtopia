@@ -30,9 +30,9 @@ export LS_COLORS="di=01;35:ow=01;31"     # director and file colors
 
 
 # Environment Aliases.
-alias re="source ~/.zshrc && echo REFRESHED!"
-alias ez="vim ~/.zshrc"
-alias gs="gst"
+alias re='source ~/.zshrc && echo REFRESHED!'
+alias ez='vim ~/.zshrc'
+alias gs='gst'
 
 # Navigation Aliases.
 alias ls='ls -hF --color=auto --group-directories-first'
@@ -46,13 +46,14 @@ alias rm='rm -if'
 alias cp='cp -i'
 alias mv='mv -i'
 alias empty='rm -I * .* && echo EMPTIED!'
-alias trash='mv -t ~/trash/ --backup=t && echo TRASH BINED!'
+alias trash='mv -t ~/trash/ --backup=t && echo TRASHED!'
 function dchmod { chmod $1 $(find . ! -type f); }
 function fchmod { chmod $1 $(find . ! -type d); }
 
 # TMUX.
 alias tmux='tmux -2 -u'
 alias A='tmux attach'
+alias retmux='tmux source-file ~/.tmux.conf && echo REFRESHED TMUX CONFIGURATION!'
 
 # Tools.
 alias col='termcolors | less'
