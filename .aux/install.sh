@@ -15,9 +15,9 @@
 # Description:    Vimez installation script.
 # ------------------------------------------------------------------------------
 
-clear
 
 # UPDATES AND INSTALLS {{{
+clear
 aptitude update
 aptitude install git-core zsh tmux
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
@@ -59,8 +59,8 @@ echo -e "\nCloned zshtopia successfully!\n"
 #}}}
 # LINK TO CONFIGURATION FILES {{{
 cd ~
-ln -s .zsh/zshrc ~/.zshrc
-ln -s .zsh/tmux.conf ~/.tmux.conf
+ln -sf .zsh/zshrc ~/.zshrc
+ln -sf .zsh/tmux.conf ~/.tmux.conf
 cp ~/.zsh/gitconfig ~/.gitconfig
 echo -e "\nLinked configuration files successfully!\n"
 #------------------------------------------------------------------------------
