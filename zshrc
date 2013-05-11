@@ -6,7 +6,7 @@ ZSH_THEME="juanghurtado"     # Specify theme.
 COMPLETION_WAITING_DOTS="true" # Red dots to be displayed while waiting for completion.
 
 # Load plugins. Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 unsetopt correctall
