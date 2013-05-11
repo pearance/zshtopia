@@ -46,13 +46,12 @@ alias rm='rm -if'
 alias cp='cp -i'
 alias mv='mv -i'
 alias empty='rm -I * .* && echo EMPTIED!'
-alias trash='mv -t ~/trash/ --backup=t && echo TRASHED!'
 function dchmod { chmod $1 $(find . ! -type f); }
 function fchmod { chmod $1 $(find . ! -type d); }
 
 # Git Overrides.
 alias gpl='git pull'
-alias gl='git lg | head' 
+alias gl='git lg | head'
 alias gll='git lg'
 alias glog='git log'
 
