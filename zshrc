@@ -30,9 +30,8 @@ export LS_COLORS="di=01;35:ow=01;31"     # director and file colors
 
 
 # Environment Aliases.
+alias ez='vim ~/.zsh/zshrc'
 alias re='source ~/.zshrc && echo REFRESHED!'
-alias ez='vim ~/.zshrc'
-alias gs='gst'
 
 # Navigation Aliases.
 alias ls='ls -hF --color=auto --group-directories-first'
@@ -54,13 +53,18 @@ alias gpl='git pull'
 alias gl='git lg | head'
 alias gll='git lg'
 alias glog='git log'
+alias gs='gst'
 
 # TMUX.
 alias tmux='tmux -2 -u'
 alias A='tmux attach'
 alias retmux='tmux source-file ~/.tmux.conf && echo REFRESHED TMUX CONFIGURATION!'
 
-# Tools.
+# VIM.
+alias ev='vim ~/.vim/vimrc'
+alias vup='cd ~/.vim && git pull && gl && cd -'
+
+# Misc. Tools.
 alias col='termcolors | less'
 
 
