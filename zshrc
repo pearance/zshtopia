@@ -3,7 +3,7 @@ source ~/.zsh/antigen/antigen.zsh
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
-# Bundles from the default repo (robbyrussell's oh-my-zsh).
+# Bundles from the default repo.
 antigen bundle git
 antigen bundle colored-man
 
@@ -11,26 +11,13 @@ antigen bundle colored-man
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
-antigen theme steeef
+antigen theme juanghurtado
 
 # Tell antigen that you're done.
 antigen apply
 
-
-
-# Path to your oh-my-zsh configuration.
-# ZSH=$HOME/.oh-my-zsh
-# ZSH_THEME="juanghurtado"
-#ZSH_THEME="steeef"
-# COMPLETION_WAITING_DOTS="true" # Red dots to be displayed while waiting for completion.
-
-# Load plugins. Example format: plugins=(rails git textmate ruby lighthouse)
-# plugins=(git zsh-syntax-highlighting)
-# source $ZSH/oh-my-zsh.sh
-
+# Zsh Options
 unsetopt correctall
-
-
 
 # Export Environment Variables.
 export RAILS_DEFAULT_DATABASE=mysql
@@ -38,13 +25,15 @@ export VISUAL=vim
 export EDITOR=vim
 export TERM="xterm-256color"
 export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:~/bin
-# export LESS_TERMCAP_mb=$'\E[01;30m'      # begin blinking
-# export LESS_TERMCAP_md=$'\E[01;35m'      # begin bold
-# export LESS_TERMCAP_me=$'\E[0m'          # end mode
-# export LESS_TERMCAP_se=$'\E[0m'          # end standout-mode
-# export LESS_TERMCAP_so=$'\E[01;45;37m'   # begin standout-mode - info box
-# export LESS_TERMCAP_ue=$'\E[0m'          # end underline
-# export LESS_TERMCAP_us=$'\E[01;36m'      # begin underline
+
+# Molokai like colors for man pages.
+export LESS_TERMCAP_mb=$'\E[01;30m'      # begin blinking
+export LESS_TERMCAP_md=$'\E[01;35m'      # begin bold
+export LESS_TERMCAP_me=$'\E[0m'          # end mode
+export LESS_TERMCAP_se=$'\E[0m'          # end standout-mode
+export LESS_TERMCAP_so=$'\E[01;45;37m'   # begin standout-mode - info box
+export LESS_TERMCAP_ue=$'\E[0m'          # end underline
+export LESS_TERMCAP_us=$'\E[01;36m'      # begin underline
 export LS_COLORS="di=01;35:ow=01;31"     # director and file colors
 
 
@@ -87,6 +76,9 @@ alias vup='cd ~/.vim && git pull && gl && cd -'
 # Misc. Tools.
 alias col='termcolors | less'
 
+
+# Paths
+platforms=/srv/aegir/platforms
 
 
 # Load RVM.
