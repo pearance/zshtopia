@@ -20,7 +20,7 @@
 clear
 aptitude update
 aptitude install git-core zsh tmux
-curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+# curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 echo -e "\nInstalled zsh successfully!\n"
 #------------------------------------------------------------------------------
 
@@ -29,7 +29,6 @@ echo -e "\nInstalled zsh successfully!\n"
 # CREATE FOLDERS {{{
 mkdir -p ~/bin/
 mkdir -p ~/backups/
-mkdir -p ~/trash/
 echo -e "\nCreated folder structure successfully!\n"
 #------------------------------------------------------------------------------
 
