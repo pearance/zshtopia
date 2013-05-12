@@ -5,7 +5,6 @@ antigen use oh-my-zsh
 
 # Bundles from the default repo.
 antigen bundle git
-antigen bundle colored-man
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
