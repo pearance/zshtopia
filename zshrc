@@ -58,6 +58,7 @@ function fchmod { chmod $1 $(find . ! -type d); }
 
 # Git Overrides.
 alias gpl='git pull'
+alias gpu='git pull'
 alias gl='git lg | head'
 alias gll='git lg'
 alias glog='git log'
