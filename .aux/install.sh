@@ -18,6 +18,7 @@
 
 # PACKAGE INSTALLS {{{
 clear
+echo "Please enter your password"
 sudo aptitude update
 sudo aptitude install git-core zsh tmux
 # curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
@@ -43,6 +44,9 @@ echo -e "\nBackedup existing environment successfully!\n"
 #}}}
 # CLONE ZSHTOPIA {{{
 git clone https://github.com/zshtopia/zshtopia.git ~/.zsh
+cd ~/.zsh/
+git submodule init
+git submodule update
 echo -e "\nCloned zshtopia successfully!\n"
 #------------------------------------------------------------------------------
 
