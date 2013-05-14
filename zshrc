@@ -18,6 +18,11 @@ antigen apply
 # Options
 unsetopt correctall
 setopt noflowcontrol
+
+## Completion
+setopt always_to_end
+setopt auto_menu
+setopt complete_in_word
 #-------------------------------------------------------------------------------
 
 
