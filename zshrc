@@ -17,6 +17,7 @@ antigen apply
 
 # Options
 unsetopt correctall
+setopt noflowcontrol
 #-------------------------------------------------------------------------------
 
 
@@ -27,6 +28,7 @@ export VISUAL=vim
 export EDITOR=vim
 export TERM="xterm-256color"
 export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:~/bin
+stty -ixon
 #-------------------------------------------------------------------------------
 
 
