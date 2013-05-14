@@ -1,5 +1,5 @@
-#vim:fdm=marker:
 #!/bin/bash
+#vim:fdm=marker:
 #          _     _              _
 #  _______| |__ | |_ ___  _ __ (_) __ _
 # |_  / __| '_ \| __/ _ \| '_ \| |/ _` |
@@ -18,7 +18,6 @@
 
 # PACKAGE INSTALLS {{{
 clear
-echo "Please enter your password"
 sudo aptitude update
 sudo aptitude install git-core zsh tmux
 # curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
