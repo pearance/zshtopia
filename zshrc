@@ -1,3 +1,4 @@
+# vim:fdm=marker:
 # Initialization
 source ~/.zsh/antigen/antigen.zsh
 antigen use oh-my-zsh
@@ -16,13 +17,50 @@ antigen apply
 
 
 # Options
-unsetopt correctall
 setopt noflowcontrol
 
 ## Completion
 setopt always_to_end
 setopt auto_menu
 setopt complete_in_word
+
+# Changing Directories
+# setopt auto_cd		# type dir & it isn't a command, go to your path.
+setopt cdablevarS # if argument to cd is a parameter whose value is a dir, become the cd.
+setopt pushd_ignore_dups # avoid duplicate dir onto the directory stack.
+# Expansion and Globbing
+setopt extended_glob # treat #, ~, and ^ as part of patterns for filename generation
+
+# History
+setopt append_history # Allow multiple terminal sessions to all append to one zsh command history
+setopt extended_history # save timestamp of command and duration
+setopt inc_append_history # Add comamnds as they are typed, don't wait until shell exit
+setopt hist_expire_dups_first # when trimming history, lose oldest duplicates first
+setopt hist_ignore_dups # Do not write events to history that are duplicates of previous events
+setopt hist_ignore_space # remove command line from history list when first character on the line is a space
+setopt hist_find_no_dups # When searching history don't display results already cycled through twice
+setopt hist_reduce_blanks # Remove extra blanks from each command line being added to history
+setopt hist_verify # don't execute, just expand history
+setopt share_history # imports new commands and appends typed commands to history
+
+# Completion
+setopt always_to_end # When completing from the middle of a word, move the cursor to the end of the word
+setopt auto_menu # show completion menu on successive tab press. needs unsetop menu_complete to work
+setopt auto_name_dirs # any parameter that is set to the absolute name of a directory immediately becomes a name for that directory
+setopt complete_in_word # Allow completion from within a word/phrase
+
+unsetopt menu_complete # do not autoselect the first completion entry
+
+# Correction
+unsetopt correct # spelling correction for commands
+unsetopt correctall # spelling correction for arguments
+
+# Prompt
+setopt prompt_subst # Enable parameter expansion, command substitution, and arithmetic expansion in the prompt
+setopt transient_rprompt # only show the rprompt on the current prompt
+
+# Scripts and Functions
+setopt multios # perform implicit tees or cats when multiple redirections are attempted
 #-------------------------------------------------------------------------------
 
 
@@ -32,13 +70,13 @@ export RAILS_DEFAULT_DATABASE=mysql
 export VISUAL=vim
 export EDITOR=vim
 export TERM="xterm-256color"
-export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:~/bin
+export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:~/bin:/var/lib/gems/1.8/bin
 stty -ixon
 #-------------------------------------------------------------------------------
 
 
 
-# Molokai like colors for man pages.
+# Molokai like colors for less and man pages.
 export LESS_TERMCAP_mb=$'\E[01;30m'      # begin blinking
 export LESS_TERMCAP_md=$'\E[01;35m'      # begin bold
 export LESS_TERMCAP_me=$'\E[0m'          # end mode
@@ -130,6 +168,12 @@ alias vup='cd ~/.vim && git pull && gl && cd -'
 
 
 
+# DRUSH.
+#-------------------------------------------------------------------------------
+alias dr='drush -y'
+
+
+
 # Misc. Tools.
 alias col='termcolors | less'
 #-------------------------------------------------------------------------------
@@ -137,7 +181,8 @@ alias col='termcolors | less'
 
 
 # Paths
-platforms=/srv/aegir/platforms
+platforms=/srv/aegir/platforms/
+pearance=/srv/aegir/pearance.com/www/development/http/
 #-------------------------------------------------------------------------------
 
 
