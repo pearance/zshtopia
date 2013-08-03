@@ -19,7 +19,7 @@
 # PACKAGE INSTALLS {{{
 clear
 sudo aptitude update
-sudo aptitude install git-core zsh tmux
+sudo aptitude install -y git-core zsh tmux
 # curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 echo -e "\nInstalled zsh successfully!\n"
 #------------------------------------------------------------------------------
