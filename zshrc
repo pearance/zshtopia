@@ -1,5 +1,15 @@
 # vim:fdm=marker:
-# Initialization
+#           _
+#   _______| |__  _ __ ___
+#  |_  / __| '_ \| '__/ __|
+#   / /\__ \ | | | | | (__
+#  /___|___/_| |_|_|  \___|
+#
+# Authors:       Fontaine Cook, Various Contributors
+# Description:   Configuration file for the terminal multiplexer tmux.
+#-------------------------------------------------------------------------------
+
+# Initialization {{{
 source ~/.zsh/antigen/antigen.zsh
 antigen use oh-my-zsh
 
@@ -16,6 +26,14 @@ antigen apply
 
 
 
+
+
+
+
+
+
+
+# }}}
 # Options
 setopt noflowcontrol
 
