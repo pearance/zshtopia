@@ -34,7 +34,7 @@ antigen apply
 
 
 # }}}
-# Options
+# Options {{{
 setopt noflowcontrol
 
 ## Completion
@@ -83,6 +83,14 @@ setopt multios # perform implicit tees or cats when multiple redirections are at
 
 
 
+
+
+
+
+
+
+
+# }}}
 # Export Environment Variables.
 export RAILS_DEFAULT_DATABASE=mysql
 export VISUAL=vim
