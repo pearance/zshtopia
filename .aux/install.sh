@@ -82,10 +82,11 @@ echo -e "\nGit configured successfully!\n"
 
 
 #}}}
-# CLEAN UP {{{
+# WRAP UP {{{
 #------------------------------------------------------------------------------
 rm ~/install.sh
 echo -e "\nCleaned up successfully!\n"
 zsh
-#}}}
+
 # TODO: Option to archive .profile .bashrc .bash_history
+# }}}
