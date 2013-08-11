@@ -9,7 +9,7 @@
 # Description:   Configuration file for the terminal multiplexer tmux.
 #-------------------------------------------------------------------------------
 
-# Initialization {{{
+# INITIALIZATION {{{
 source ~/.zsh/antigen/antigen.zsh
 antigen use oh-my-zsh
 
@@ -34,7 +34,7 @@ antigen apply
 
 
 # }}}
-# Options {{{
+# OPTIONS {{{
 setopt noflowcontrol
 
 ## Completion
@@ -91,7 +91,7 @@ setopt multios # perform implicit tees or cats when multiple redirections are at
 
 
 # }}}
-# Export Environment Variables.
+# EXPORT ENVIRONMENT VARIABLES {{{
 export RAILS_DEFAULT_DATABASE=mysql
 export VISUAL=vim
 export EDITOR=vim
@@ -115,7 +115,15 @@ export LS_COLORS="di=01;35:ow=01;31"     # director and file colors
 
 
 
-# Environment Aliases.
+
+
+
+
+
+
+
+# }}}
+# ENVIRONMENT ALIASES {{{
 alias ez='vim ~/.zsh/zshrc'
 alias re='source ~/.zshrc && echo REFRESHED!'
 #-------------------------------------------------------------------------------
@@ -209,19 +217,31 @@ alias trashe='trash-empty'
 
 
 
-# Load RVM.
+
+
+
+
+
+
+
+# }}}
+# LOAD RVM {{{
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 #-------------------------------------------------------------------------------
 
 
 
+
+
+
+
+
+# }}}
 # WRAP {{{
 # "Load Local Configurations"
 . ~/dotfiles/zsh.local/zshrc.local
 #-------------------------------------------------------------------------------
-
-
 
 # "Todo/s, Fixme/s"
 # TODO:
