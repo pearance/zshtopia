@@ -176,13 +176,16 @@ alias dr='drush -y'
 
 # Misc. Tools.
 alias col='termcolors | less'
+alias trash='trash-put'
+alias trashl='trash-list'
+alias trashe='trash-empty'
 #-------------------------------------------------------------------------------
 
 
 
 # Paths
 platforms=/srv/aegir/platforms/
-pearance=/srv/aegir/pearance.com/www/development/http/
+pearance=/srv/pearance.com
 #-------------------------------------------------------------------------------
 
 
