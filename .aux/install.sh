@@ -53,6 +53,10 @@ echo -e "\nCloned zshtopia successfully!\n"
 #}}}
 # LINK TO CONFIGURATION FILES {{{
 cd ~
+mkdir -p ~/dotfiles/zsh.local/
+touch ~/dotfiles/zsh.local/zshrc.local
+touch ~/dotfiles/zsh.local/tmux.conf.local
+
 ln -sf .zsh/zshrc ~/.zshrc
 ln -sf .zsh/tmux.conf ~/.tmux.conf
 cp ~/.zsh/gitconfig ~/.gitconfig
@@ -61,7 +65,7 @@ echo -e "\nLinked configuration files successfully!\n"
 
 
 #}}}
-# USER iNPUT {{{
+# USER INPUT {{{
 echo -e "For your git configuration, please enter your..."
 read -p "Full Name: " fullname
 echo
