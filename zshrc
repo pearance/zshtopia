@@ -154,10 +154,10 @@ alias gaddresolve='git !f() { git ls-files --unmerged | cut -f2 | sort -u ; }; g
 
 
 # TMUX.
-#-------------------------------------------------------------------------------
 alias tmux='tmux -2 -u'
 alias A='tmux attach'
 alias retmux='tmux source-file ~/.tmux.conf && echo REFRESHED TMUX CONFIGURATION!'
+#-------------------------------------------------------------------------------
 
 
 
@@ -169,8 +169,8 @@ alias vup='cd ~/.vim && git pull && gl && cd -'
 
 
 # DRUSH.
-#-------------------------------------------------------------------------------
 alias dr='drush -y'
+#-------------------------------------------------------------------------------
 
 
 
@@ -183,15 +183,20 @@ alias trashe='trash-empty'
 
 
 
-# Paths
-platforms=/srv/aegir/platforms/
-pearance=/srv/pearance.com
-#-------------------------------------------------------------------------------
-
-
-
 # Load RVM.
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 #-------------------------------------------------------------------------------
 
+
+
+# WRAP {{{
+# "Load Local Configurations"
+. ~/dotfiles/zsh.local/zshrc.local
+#-------------------------------------------------------------------------------
+
+
+
+# "Todo/s, Fixme/s"
+# TODO:
+# }}}
