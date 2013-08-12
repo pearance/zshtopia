@@ -17,6 +17,7 @@ antigen use oh-my-zsh
 antigen bundle git
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle command-not-found
+antigen bundle sharat87/autoenv
 
 # Prompt Theme
 antigen theme juanghurtado
