@@ -125,6 +125,7 @@ export LS_COLORS="di=01;35:ow=01;31"     # director and file colors
 # }}}
 # ENVIRONMENT ALIASES {{{
 alias ez='vim ~/.zsh/zshrc'
+alias ezl='vim ~/dotfiles/zsh.local/zshrc.local'
 alias re='source ~/.zshrc && echo REFRESHED!'
 #-------------------------------------------------------------------------------
 
