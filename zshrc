@@ -18,6 +18,7 @@ antigen bundle git
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle command-not-found
 antigen bundle sharat87/autoenv
+antigen bundle bower
 
 # Prompt Theme
 antigen theme juanghurtado
@@ -153,6 +154,12 @@ function fchmod { chmod $1 $(find . ! -type d); }
 
 
 
+# Bower
+alias bower='noglob bower'
+#-------------------------------------------------------------------------------
+
+
+
 # Git Overrides.
 alias g='git'
 alias gs='clear; git status'
@@ -191,7 +198,7 @@ alias gaddresolve='git !f() { git ls-files --unmerged | cut -f2 | sort -u ; }; g
 
 # TMUX.
 alias tmux='tmux -2 -u'
-alias A='tmux attach'
+alias A='tmux attach -d'
 alias retmux='tmux source-file ~/.tmux.conf && echo REFRESHED TMUX CONFIGURATION!'
 #-------------------------------------------------------------------------------
 
@@ -242,7 +249,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # }}}
 # WRAP {{{
 # "Load Local Configurations"
-. ~/dotfiles/zsh.local/zshrc.local
+source ~/dotfiles/zsh.local/zshrc.local
 #-------------------------------------------------------------------------------
 
 # "Todo/s, Fixme/s"
