@@ -19,6 +19,8 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle command-not-found
 antigen bundle sharat87/autoenv
 antigen bundle bower
+antigen bundle yonchu/grunt-zsh-completion
+antigen bundle npm
 
 # Prompt Theme
 antigen theme juanghurtado
