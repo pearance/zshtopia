@@ -162,6 +162,16 @@ alias bower='noglob bower'
 
 
 
+# Node Package Manager
+alias ni='npm --save install'
+alias nid='npm --save-dev install'
+alias nig='sudo npm -g install'
+alias nrm='npm --save remove'
+alias nrmg='sudo npm -g remove'
+#-------------------------------------------------------------------------------
+
+
+
 # Git Overrides.
 alias g='git'
 alias gs='clear; git status'
@@ -224,6 +234,7 @@ alias col='termcolors | less'
 alias trash='trash-put'
 alias trashl='trash-list'
 alias trashe='trash-empty'
+alias trashr='restore-trash'
 #-------------------------------------------------------------------------------
 
 
