@@ -18,8 +18,9 @@
 
 # PACKAGE INSTALLS {{{
 clear
+cd ~
 sudo aptitude update
-sudo aptitude install -y git-core zsh tmux
+sudo aptitude install -y git-core zsh tmux trash-cli
 # curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 echo -e "\nInstalled zsh successfully!\n"
 #------------------------------------------------------------------------------
@@ -33,7 +34,7 @@ for i in .zshrc .zsh .tmux.conf .zshrc.pre-oh-my-zsh .gitconfig
 	do [ -e $i  ] && mv -f --backup=t $i ~/backups/pre-zshtopia/$i.bak
 done
 
-for i in .zshrc .tmux.conf
+for i in .zshrc .zsh .tmux.conf .zshrc.pre-oh-my-zsh .gitconfig
 	do [ -e $i  ] && rm -f $i
 done
 echo -e "\nBackedup existing environment successfully!\n"
@@ -41,7 +42,7 @@ echo -e "\nBackedup existing environment successfully!\n"
 
 
 #}}}
-# CLONE ZSHTOPIA {{{
+# CLONE ZSHTOPIA & DOTFILES {{{
 git clone https://github.com/zshtopia/zshtopia.git ~/.zsh
 cd ~/.zsh/
 git submodule init
