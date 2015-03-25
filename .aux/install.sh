@@ -20,7 +20,7 @@
 clear
 cd ~
 sudo aptitude update
-sudo aptitude install -y git-core zsh tmux trash-cli
+sudo aptitude install -y zsh tmux trash-cli
 # curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 echo -e "\nInstalled zsh successfully!\n"
 #------------------------------------------------------------------------------
@@ -30,11 +30,11 @@ echo -e "\nInstalled zsh successfully!\n"
 # BACKUP ANY EXISTING ENVIRONMENT {{{
 mkdir -p ~/backups/pre-zshtopia/
 
-for i in .zshrc .zsh .tmux.conf .zshrc.pre-oh-my-zsh .gitconfig
+for i in .zshrc .zsh .zshrc.pre-oh-my-zsh
 	do [ -e $i  ] && mv -f --backup=t $i ~/backups/pre-zshtopia/$i.bak
 done
 
-for i in .zshrc .zsh .tmux.conf .zshrc.pre-oh-my-zsh .gitconfig
+for i in .zshrc .zsh .zshrc.pre-oh-my-zsh
 	do [ -e $i  ] && rm -f $i
 done
 echo -e "\nBackedup existing environment successfully!\n"
@@ -42,7 +42,7 @@ echo -e "\nBackedup existing environment successfully!\n"
 
 
 #}}}
-# CLONE ZSHTOPIA & DOTFILES {{{
+# CLONE ZSHTOPIA {{{
 git clone https://github.com/zshtopia/zshtopia.git ~/.zsh
 cd ~/.zsh/
 git submodule init
@@ -54,31 +54,8 @@ echo -e "\nCloned zshtopia successfully!\n"
 #}}}
 # LINK TO CONFIGURATION FILES {{{
 cd ~
-mkdir -p ~/dotfiles/zsh.local/
-touch ~/dotfiles/zsh.local/zshrc.local
-touch ~/dotfiles/zsh.local/tmux.conf.local
-
-ln -sf .zsh/zshrc ~/.zshrc
-ln -sf .zsh/tmux.conf ~/.tmux.conf
-cp ~/.zsh/gitconfig ~/.gitconfig
+ln -sf ~/.zsh/zshrc ~/.zshrc
 echo -e "\nLinked configuration files successfully!\n"
-#------------------------------------------------------------------------------
-
-
-#}}}
-# USER INPUT {{{
-echo -e "For your git configuration, please enter your..."
-read -p "Full Name: " fullname
-echo
-read -p "Email Address: " email
-#------------------------------------------------------------------------------
-
-
-#}}}
-# GENERATE GIT CONFIG FILE {{{
-git config --global user.name "$fullname"
-git config --global user.email "$email"
-echo -e "\nGit configured successfully!\n"
 #------------------------------------------------------------------------------
 
 
