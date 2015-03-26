@@ -99,8 +99,8 @@ setopt multios # perform implicit tees or cats when multiple redirections are at
 export RAILS_DEFAULT_DATABASE=mysql
 export VISUAL=vim
 export EDITOR=vim
-export TERM="xterm-256color"
 export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:~/bin:/var/lib/gems/1.8/bin
+[[ $TMUX = "" ]] && export TERM="gnome-256color"
 stty -ixon
 #-------------------------------------------------------------------------------
 
