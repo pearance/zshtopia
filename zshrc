@@ -129,7 +129,7 @@ export LS_COLORS="di=01;35:ow=01;31"     # director and file colors
 # }}}
 # ENVIRONMENT ALIASES {{{
 alias ez='vim ~/.zsh/zshrc'
-alias ezl='vim ~/dotfiles/zsh.local/zshrc.local'
+alias ezl='vim ~/.zshrc.local'
 alias re='source ~/.zshrc && echo REFRESHED!'
 #-------------------------------------------------------------------------------
 
@@ -262,7 +262,7 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # }}}
 # WRAP {{{
 # "Load Local Configurations"
-source ~/dotfiles/zsh.local/zshrc.local
+source ~/.zshrc.local
 #-------------------------------------------------------------------------------
 
 # "Todo/s, Fixme/s"
