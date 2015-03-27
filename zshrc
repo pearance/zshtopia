@@ -96,11 +96,9 @@ setopt multios # perform implicit tees or cats when multiple redirections are at
 
 # }}}
 # EXPORT ENVIRONMENT VARIABLES {{{
-export RAILS_DEFAULT_DATABASE=mysql
 export VISUAL=vim
 export EDITOR=vim
 export PATH=$PATH:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:~/bin:/var/lib/gems/1.8/bin
-[[ $TMUX = "" ]] && export TERM="gnome-256color"
 stty -ixon
 #-------------------------------------------------------------------------------
 
